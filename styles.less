@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    color: white;
 }
 
 // CURTAINS
@@ -8,7 +9,7 @@ body {
 
 .rnOuter {
     // background: darken(@accent,12%);
-    background: black;
+    background: rgb(32, 32, 32);
     overflow: hidden;
     position:relative;   
     
@@ -20,24 +21,27 @@ body {
     width: 100vw;
     // border: 5px solid mediumvioletred;
     background: darken(@accent,12%);
-    transition: background 4s ease-in-out;
+    transition: background 6s ease-in-out;
     z-index: 2;
+    pointer-events: none;
 }
 
 .rnOuter:hover .curtainDisplay {
-    transition-delay: 1200ms;
+    // transition-delay: 1200ms;
     background: transparent;
-    transform-origin: -120% top;
+    // transition: background 4s ease-in-out;
+    // transform-style: preserve-3d;
+    // transform-origin: -120% top;
 }
 
 .rnInnerLeft {
     height: 120vh;
     width: 50%;
     position: fixed;
-    top:-10%; right: 0;  bottom: 0; left: 0;
+    top:-10%; right: 30%;  bottom: 0; left: 0;
     // margin: auto;
     transform-style: preserve-3d;
-    transition: transform 6s ease;
+    transition: transform 8s linear;
     transform-origin: -120% top;
     // background: darken(@accent,12%);
     // z-index: 1;
@@ -50,7 +54,7 @@ body {
     position: fixed;
     top:-10%; right: 0;  bottom: 0; left: 50%;
     transform-style: preserve-3d;
-    transition: transform 6s ease;
+    transition: transform 6s linear;
     transform-origin: 120% top;
     // background: darken(@accent,12%);
     // border: 5px solid darkorange;
@@ -163,9 +167,25 @@ body {
 
 // LANDING SECTION
 
-.introCell {
-    width: 700px;
+.intro {
+    display: flex;
+    justify-content: center;
+}
 
+.introCell, .movieScreen {
+    position: absolute;
+}
+
+.movieScreen {
+    width: 100%;
+    z-index: 1;
+    pointer-events: none;
+    margin-bottom: 10px;
+}
+
+.introCell {
+    // width: 800px;
+    padding: 2% 16%;
 }
 // .rnOuter:hover .intro {
 //     display: block;
@@ -179,26 +199,20 @@ body {
 
 // ABOUT ME SECTION
 
-.aboutMe {
-    display: table;
-    width: 100%;
-    height: 100vh;  
-    text-align: center;
-}
-
-.description {
-    color: black;
-    display: table-cell;
-    vertical-align: middle;
-    transition:color 3s ease;
-}
 
 .rnOuter:hover .description {
     color: cornflowerblue;
 }
 
 
+// MY IMAGES
 
+// .myImages {
+//     display: flex;
+//     flex-direction: row;
+//     height: 500px;
+//     width: 400px;
+// }
 
 // OUTRO SECTION
 
