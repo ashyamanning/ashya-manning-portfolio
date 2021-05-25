@@ -244,3 +244,32 @@ section {
 .links img {
     width: 48px;
 }
+
+
+// PROJECT CARDS 2
+
+.project2Cards {
+    display: none;
+}
+.project2Cards img {
+    height: 350px;
+    object-fit: cover;
+    filter: brightness(50%);
+    height: ~"min(350px, 75vh)";
+}
+
+
+
+// RESPONSIVENESS
+
+@media only screen and (max-width: 628px) {
+    .curtainDisplay {
+        display: none;
+    }
+    .project2Cards {
+        display: block;
+    }
+    .project1Cards {
+        display: none;
+    }
+}
